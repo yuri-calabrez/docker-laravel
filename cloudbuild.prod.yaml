@@ -26,7 +26,7 @@ steps:
 
 - id: "Rodando phpunit"
   name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit -c', '/var/www/phpunit.xml']
+  args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/phpunit.xml']
 
 - id: "Building image from Dockerfile.prod"
   name: 'gcr.io/cloud-builders/docker'
